@@ -1,107 +1,216 @@
-<!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+    <title>
+        Messanger
+    </title>
+    <style>
+        :root {
+            --body-bg: grey;
+            --msger-bg: #fff;
+            --border: 2px solid #ddd;
+            --left-msg-bg: #ececec;
+            --right-msg-bg: #579ffb;
+        }
 
-/* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
+        html {
+            box-sizing: border-box;
+        }
 
-/* The popup chat - hidden by default */
-.chat-popup {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  right: 15px;
-  border: 3px solid #f1f1f1;
-  z-index: 9;
-}
+        *,
+        *:before,
+        *:after {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
 
-/* Add styles to the form container */
-.form-container {
-  max-width: 300px;
-  padding: 10px;
-  background-color: white;
-}
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-image: var(--body-bg);
+            font-family: Helvetica, sans-serif;
+        }
 
-/* Full-width textarea */
-.form-container textarea {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  border: none;
-  background: #f1f1f1;
-  resize: none;
-  min-height: 200px;
-}
+        .msger {
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-between;
+            width: 100%;
+            margin: 25px 10px;
+            height: calc(100% - 50px);
+            border: var(--border);
+            border-radius: 5px;
+            background: var(--msger-bg);
+            box-shadow: 0 15px 15px -5px rgba(0, 0, 0, 0.2);
 
-/* When the textarea gets focus, do something */
-.form-container textarea:focus {
-  background-color: #ddd;
-  outline: none;
-}
+        }
 
-/* Set a style for the submit/send button */
-.form-container .btn {
-  background-color: #04AA6D;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom:10px;
-  opacity: 0.8;
-}
+        .msger-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+            border: 2px solid tomato;
+            background: #eee;
+            color: red;
+        }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
+        .msger-chat {
+            flex: 1;
+            overflow-y: auto;
+            padding: 10px;
+        }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-  opacity: 1;
-}
-</style>
+        .msger-chat::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .msger-chat::-webkit-scrollbar-track {
+            background: #ddd;
+        }
+
+        .msger-chat::-webkit-scrollbar-thumb {
+            background: #bdbdbd;
+        }
+
+        .msg {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 10px;
+        }
+
+        .msg:last-of-type {
+            margin: 0;
+        }
+
+        .msg-img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            background: #ddd;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+        }
+
+        .msg-bubble {
+            max-width: 450px;
+            padding: 15px;
+            border-radius: 15px;
+            background: var(--left-msg-bg);
+        }
+
+        .msg-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .msg-info-name {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .msg-info-time {
+            font-size: 0.85em;
+        }
+
+        .left-msg .msg-bubble {
+            border-bottom-left-radius: 0;
+        }
+
+        .right-msg {
+            flex-direction: row-reverse;
+        }
+
+        .right-msg .msg-bubble {
+            background: var(--right-msg-bg);
+            color: #fff;
+            border-bottom-right-radius: 0;
+        }
+
+        .right-msg .msg-img {
+            margin: 0 0 0 10px;
+        }
+
+        .msger-inputarea {
+            display: flex;
+            padding: 10px;
+            border: 2px solid tomato;
+            background: #eee;
+        }
+
+        .msger-inputarea * {
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            font-size: 1em;
+        }
+
+        .msger-input {
+            flex: 1;
+            background: #ddd;
+        }
+
+        .msger-send-btn {
+            margin-left: 10px;
+            background: rgb(0, 196, 65);
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.23s;
+        }
+
+        .msger-send-btn:hover {
+            background: rgb(0, 180, 50);
+        }
+
+        .msger-chat {
+            background-color: #fcfcfe;
+        }
+    </style>
+
+
 </head>
+
 <body>
+    <section class="msger">
+        <header class="msger-header">
+            <div class="msger-header-title">
+                <i class="fas fa-comment-alt"></i> Design.In
+            </div>
+            <div class="msger-header-options">
+                <span><i class="fas fa-cog"></i></span>
+            </div>
+        </header>
 
-<button class="open-button" onclick="openForm()">Chat</button>
+        <main class="msger-chat">
+            <div class="msg left-msg">
+                <div class="msg-img" style="background-image: url(https://image.flaticon.com/icons/svg/327/327779.svg)">
+                </div>
 
-<div class="chat-popup" id="myForm">
-  <form action="/action_page.php" class="form-container">
-    <h1>Chat</h1>
+                <div class="msg-bubble">
+                    <div class="msg-info">
+                        <div class="msg-info-name">Design.In</div>
+                        <div class="msg-info-time">12:45</div>
+                    </div>
 
-    <label for="msg"><b>Message</b></label>
-    <textarea placeholder="Type message.." name="msg" required></textarea>
+                    <div class="msg-text">
+                        Hi, welcome to our chat feature! Go ahead and send us a message.
+                    </div>
+                </div>
+            </div>
+        </main>
 
-    <button type="submit" class="btn">Send</button>
-    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
-  </form>
-</div>
-
-<script>
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
-}
-
-function closeForm() {
-  document.getElementById("myForm").style.display = "none";
-}
-</script>
-
+        <form class="msger-inputarea">
+            <input type="text" class="msger-input" placeholder="Enter your message...">
+            <button type="submit" class="msger-send-btn">Send</button>
+        </form>
+    </section>
 </body>
+
 </html>
