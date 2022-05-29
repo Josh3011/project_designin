@@ -19,8 +19,13 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
 //Route Detail Jasa
 Route::get('listjasa1', function () {
+=======
+//Route List Jasa
+Route::get('listjasa', function () {
+>>>>>>> e5b53a066a0a0673f194e42f9c5e01d9e9a86f6a
     return view('daftarjasa.listjasa1');
 });
 Route::get('listjasa2', function () {
@@ -29,3 +34,5 @@ Route::get('listjasa2', function () {
 Route::get('listjasa3', function () {
     return view('daftarjasa.listjasa3');
 });
+
+
