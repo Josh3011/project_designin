@@ -29,5 +29,14 @@ Route::get('listjasa2', function () {
 Route::get('listjasa3', function () {
     return view('daftarjasa.listjasa3');
 });
+Route::get('order', function () {
+    return view('order');
+});
+Route::get('visa', function () {
+    return view('visa');
+});
+Route::get('gopay', function () {
+    return view('gopay');
+});
 
 
