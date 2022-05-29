@@ -21,11 +21,11 @@
     <div class="w3-main" style="margin-left:300px">
 
         <!-- Header -->
-        <header id="foto">
+        <header id="poster">
             <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
                     class="fa fa-bars"></i></span>
             <div class="w3-container">
-                <h1><b>FOTO</b></h1>
+                <h1><b>POSTER</b></h1>
             </div>
         </header>
 

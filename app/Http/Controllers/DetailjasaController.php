@@ -6,5 +6,5 @@ use Illuminate\Http\Request;
 
 class DetailjasaController extends Controller
 {
-    return view('detailjasa.listjasa', ['detailjasa' => $detailjasa]);
+    return view('daftarjasa.listjasa1', ['daftarjasa' => $daftarjasa]);
 }

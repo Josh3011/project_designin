@@ -21,5 +21,11 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //Route Detail Jasa
 Route::get('listjasa', function () {
-    return view('listjasa1');
+    return view('daftarjasa.listjasa1');
+});
+Route::get('listjasa2', function () {
+    return view('daftarjasa.listjasa2');
+});
+Route::get('listjasa3', function () {
+    return view('daftarjasa.listjasa3');
 });

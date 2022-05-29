@@ -44,9 +44,9 @@
                     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown">Kategori Jasa <span
                                 class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="listjasa">Video </a></li>
-                            <li><a href="#">Foto</a></li>
-                            <li><a href="#">Poster</a></li>
+                            <li><a href="listjasa1">Video </a></li>
+                            <li><a href="listjasa2">Foto</a></li>
+                            <li><a href="listjasa3">Poster</a></li>
 
                         </ul>
                     </li>
