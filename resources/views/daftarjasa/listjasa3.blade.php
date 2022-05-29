@@ -1,7 +1,7 @@
 @extends('layouts.templateweb')
 
 @section('content')
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+<body class="w3-light-grey w3-content" style="max-width:2000px">
 
     <!-- Sidebar/menu -->
     <div class="navbar col-sm-2">
@@ -33,22 +33,18 @@
         <div class="container-fluid bg-5 text-center">
             <br>
             <div class="row">
-              <div class="col-sm-3">
-                <img src="fotolistjasa/food.jpeg" class="img-responsive" style="width:500px" alt="Image">
-                <p>Some text..</p>
-              </div>
-              <div class="col-sm-3">
-                <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                <p>Some text..</p>
-              </div>
-              <div class="col-sm-3">
-                <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                <p>Some text..</p>
-              </div>
-              <div class="col-sm-3">
-                <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                <p>Some text..</p>
-              </div>
+                <div class="col-sm-4">
+                    <img src="fotolistjasa/food.jpeg" class="img-responsive" style="width:500px" alt="Image">
+                    <p>Some text..</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
+                    <p>Some text..</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
+                    <p>Some text..</p>
+                  </div>
             </div>
           </div><br>
 
@@ -56,22 +52,18 @@
         <div class="container-fluid bg-5 text-center">
             <br>
             <div class="row">
-              <div class="col-sm-3">
-                <img src="fotolistjasa/food.jpeg" class="img-responsive" style="width:500px" alt="Image">
-                <p>Some text..</p>
-              </div>
-              <div class="col-sm-3">
-                <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                <p>Some text..</p>
-              </div>
-              <div class="col-sm-3">
-                <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                <p>Some text..</p>
-              </div>
-              <div class="col-sm-3">
-                <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                <p>Some text..</p>
-              </div>
+                <div class="col-sm-4">
+                    <img src="fotolistjasa/food.jpeg" class="img-responsive" style="width:500px" alt="Image">
+                    <p>Some text..</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
+                    <p>Some text..</p>
+                  </div>
+                  <div class="col-sm-4">
+                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
+                    <p>Some text..</p>
+                  </div>
             </div>
           </div><br>
 

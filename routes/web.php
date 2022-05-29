@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Route Detail Jasa
-Route::get('listjasa', function () {
+Route::get('listjasa1', function () {
     return view('daftarjasa.listjasa1');
 });
 Route::get('listjasa2', function () {
