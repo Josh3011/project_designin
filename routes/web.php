@@ -30,7 +30,4 @@ Route::get('listjasa3', function () {
     return view('daftarjasa.listjasa3');
 });
 
-//Route Detail Jasa (buat nyoba template) Akbr
-Route::get('detailjasa', function () {
-    return view('detail_jasa');
-});
+

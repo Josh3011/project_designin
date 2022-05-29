@@ -43,11 +43,6 @@
                             <a class="nav-link" href="listjasa">List Jasa</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="detailjasa">Detail Jasa</a>
-                        </li>
-                    </ul>
                 </div>
 
 
