@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route Detail Jasa
+//Route List Jasa
 Route::get('listjasa', function () {
     return view('daftarjasa.listjasa1');
 });
@@ -28,4 +28,9 @@ Route::get('listjasa2', function () {
 });
 Route::get('listjasa3', function () {
     return view('daftarjasa.listjasa3');
+});
+
+//Route Detail Jasa (buat nyoba template) Akbr
+Route::get('detailjasa', function () {
+    return view('detail_jasa');
 });
