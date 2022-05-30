@@ -38,5 +38,8 @@ Route::get('visa', function () {
 Route::get('gopay', function () {
     return view('gopay');
 });
+Route::get('detail_jasa', function () {
+    return view('detail_jasa');
+});
 
 
