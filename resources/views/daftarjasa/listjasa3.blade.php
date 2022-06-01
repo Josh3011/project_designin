@@ -1,7 +1,7 @@
 @extends('layouts.templateweb')
 
 @section('content')
-<body class="w3-light-grey w3-content" style="max-width:2000px">
+
 
     <!-- Sidebar/menu -->
     <div class="navbar col-sm-2">
@@ -9,7 +9,6 @@
         <ul class="nav nav-pills nav-stacked">
           <li><a href="#">Harga</a></li>
           <li><a href="#">Rating</a></li>
-          <li><a href="#">Ya</a></li>
         </ul>
     </div>
 
@@ -30,42 +29,20 @@
         </header>
 
         <!-- First Photo Grid-->
-        <div class="container-fluid bg-5 text-center">
-            <br>
-            <div class="row">
-                <div class="col-sm-4">
-                    <img src="fotolistjasa/food.jpeg" class="img-responsive" style="width:500px" alt="Image">
-                    <p>Some text..</p>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                    <p>Some text..</p>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                    <p>Some text..</p>
-                  </div>
+        @foreach ($DetailJasa as $d )
+        <div class="col-sm-4">
+            <div class="product-item">
+                <a href="#"><img height="300" width="200" src="/assets/design-in/{{$d->Foto}}" alt="">
+                </a>
+                <div class="down-content">
+                    <a href="#"><h4>{{$d->Judul}}</h4></a>
+                    <h6>{{$d->harga}}</h6>
+                    <p>{{$d->DeskripsiJasa}}</p>
+                    <span>Review (1)</span>
+                </div>
             </div>
-          </div><br>
-
-        <!-- Second Photo Grid-->
-        <div class="container-fluid bg-5 text-center">
-            <br>
-            <div class="row">
-                <div class="col-sm-4">
-                    <img src="fotolistjasa/food.jpeg" class="img-responsive" style="width:500px" alt="Image">
-                    <p>Some text..</p>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                    <p>Some text..</p>
-                  </div>
-                  <div class="col-sm-4">
-                    <img src="#" class="img-responsive" style="width:100%" alt="Image">
-                    <p>Some text..</p>
-                  </div>
-            </div>
-          </div><br>
+        </div><br>
+        @endforeach
 
         <!-- Pagination -->
         <div class="container">
@@ -76,7 +53,9 @@
               <li><a href="#">4</a></li>
               <li><a href="#">5</a></li>
             </ul>
-          </div>
-
+         </div>
     </div>
+
+
+
 @endsection

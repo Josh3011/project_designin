@@ -19,16 +19,12 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Route Detail Jasa
-Route::get('listjasa1', function () {
-    return view('daftarjasa.listjasa1');
-});
-Route::get('listjasa2', function () {
-    return view('daftarjasa.listjasa2');
-});
-Route::get('listjasa3', function () {
-    return view('daftarjasa.listjasa3');
-});
+//Route Detail Jasa by Josha
+Route::get('/listjasa2','DetailjasaController@index');
+Route::get('/listjasa2/cari','DetailjasaController@cari');
+Route::get('/detail_jasa/{id}','DetailjasaController@view');
+
+//order
 Route::get('order', function () {
     return view('order');
 });

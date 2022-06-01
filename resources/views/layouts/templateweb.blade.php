@@ -22,6 +22,13 @@
         .warnahuruf {
             color: red ;
         }
+        .row {
+            display: flex;
+        }
+        .column {
+            flex: 33.33%;
+            padding: 5px;
+        }
     </style>
 
     <!-- bootstrap -->
