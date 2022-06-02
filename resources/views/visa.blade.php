@@ -16,9 +16,9 @@
 </head>
 
 <body>
-    <div class="container-lg p-5">
+    <div class="container-lg p-5 mt-5">
 
-        <div class="form-body border m-5 p-5 rounded-3">
+        <div style="border: 2px solid #000000" class="m-5 p-5 rounded">
 
             <img class="mx-auto d-block" width="90" height="30" src="assets/design-in/visa.png">
 

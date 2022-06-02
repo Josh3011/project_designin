@@ -74,7 +74,7 @@
 
           <div class="row mt-5">
             <div class="col-9 ">
-          <div style="border: 1px solid #FF3322" class="py-5 ps-3 pe-5" >
+          <div style="border: 1px solid #FF3322" class="py-5 ps-3 pe-5 rounded" >
             <div class="d-flex justify-content-between list ">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
