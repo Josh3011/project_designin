@@ -37,13 +37,7 @@
                     aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="listjasa">List Jasa</a>
-                        </li>
-                    </ul>
-                </div>
+
 
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">

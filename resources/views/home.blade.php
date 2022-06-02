@@ -3,17 +3,80 @@
 @section('content')
     <div class="container">
         <div class="container">
+            <div class="jumbotron">
+                <div class="container text-center">
+                  <h1>WELCOME</h1>
+                  <p>Discover Our High Quality Product </p>
+                </div>
+              </div>
+              <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
 
-            <div class="card-body">
-                @if (session('status'))
-                    <div class="alert alert-success" role="alert">
-                        {{ session('status') }}
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img src="/assets/design-in/data.jpeg" alt="New York" width="1200" height="500">
+                    <div class="carousel-caption">
+                      <h3>New York</h3>
+                      <p>The atmosphere in New York is lorem ipsum.</p>
                     </div>
-                @endif
+                  </div>
 
-                You are logged in!
+                  <div class="item">
+                    <img src="/assets/design-in/gambar-main.jpg" alt="Chicago" width="1200" height="700">
+                    <div class="carousel-caption">
+                      <h3>Chicago</h3>
+                      <p>Thank you, Chicago - A night we won't forget.</p>
+                    </div>
+                  </div>
+
+                  <div class="item">
+                    <img src="/assets/design-in/data-3.jpeg" alt="Los Angeles" width="1200" height="700">
+                    <div class="carousel-caption">
+                      <h3>LA</h3>
+                      <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
             </div>
+            <div class="container-fluid bg-3 text-center">
+                <h3>OUR PRODUCT</h3><br>
+            @foreach ($DetailJasa as $d)
+
+                        <div class="col-sm-3">
+                            <div class="thumbnail">
+                                <img src="/assets/design-in/{{ $d->Foto }}" class="img-responsive" style="width:500px"
+                                    alt="Image">
+                                <div class="caption">
+                                    <a href="/detail_jasa/{{ $d->ID }}">
+                                        <h4>{{ $d->Judul }}</h4>
+                                    </a>
+                                    <h6>{{ $d->harga }}</h6>
+                                    <p>{{ $d->DeskripsiJasa }}</p>
+                                </div>
+                            </div>
+                        </div>
+
+            @endforeach
+            <center>{{ $DetailJasa->links()  }}</center>
+            </div><br><br>
 
         </div>
+
     </div>
 @endsection

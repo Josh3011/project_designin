@@ -17,6 +17,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+//Route Dahboard
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Route Detail Jasa by Josha
