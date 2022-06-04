@@ -62,24 +62,6 @@
 <body>
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a class="btn" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-align-justify"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a class="drop" href="#"><span class="glyphicon glyphicon-user"></span> MY
-                                ACCOUNT</a></li>
-                        <li><a class="drop" href="/listjasa2"><span class="glyphicon glyphicon-book"></span>
-                                DAFTAR PRODUK</a></li>
-                        <li><a class="drop" href="#"><span class="glyphicon glyphicon-user"></span>SHOPPING
-                                CART</a></li>
-                        <li><a class="drop" href="#"><span class="glyphicon glyphicon-user"></span>MY
-                                ORDER</a></li>
-
-
-                    </ul>
-                </li>
-            </ul>
             <div class="navbar-header">
                 <a class="navbar-brand" style="color:red" href="{{ url('/home') }}">
                     Design.In

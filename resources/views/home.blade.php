@@ -5,8 +5,8 @@
         <div class="container">
             <div class="jumbotron">
                 <div class="container text-center">
-                  <h1>WELCOME</h1>
-                  <p>Discover Our High Quality Product </p>
+                  <h2>WELCOME BACK,</h2>
+                  <p> Exploring a world full of creativity </p>
                 </div>
               </div>
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -20,26 +20,26 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner" role="listbox">
                   <div class="item active">
-                    <img src="/assets/design-in/data.jpeg" alt="New York" width="1200" height="500">
+                    <img src="/assets/design-in/land.jpeg" alt="Fantasy" width="1200" height="700">
                     <div class="carousel-caption">
-                      <h3>New York</h3>
-                      <p>The atmosphere in New York is lorem ipsum.</p>
+                      <h3>Fantasy</h3>
+                      <p>The faculty or activity of imagining things, especially things that are impossible or improbable.</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="/assets/design-in/gambar-main.jpg" alt="Chicago" width="1200" height="700">
+                    <img src="/assets/design-in/land-2.jpeg" alt="Peace" width="1200" height="700">
                     <div class="carousel-caption">
-                      <h3>Chicago</h3>
-                      <p>Thank you, Chicago - A night we won't forget.</p>
+                      <h3>Peace</h3>
+                      <p>Freedom from disturbance; tranquility.</p>
                     </div>
                   </div>
 
                   <div class="item">
-                    <img src="/assets/design-in/data-3.jpeg" alt="Los Angeles" width="1200" height="700">
+                    <img src="/assets/design-in/land-3.jpg" alt="Creative" width="1200" height="700">
                     <div class="carousel-caption">
-                      <h3>LA</h3>
-                      <p>Even though the traffic was a mess, we had the best time playing at Venice Beach!</p>
+                      <h3>Creative</h3>
+                      <p>Relating to or involving the imagination or original ideas, especially in the production of an artistic work.</p>
                     </div>
                   </div>
                 </div>

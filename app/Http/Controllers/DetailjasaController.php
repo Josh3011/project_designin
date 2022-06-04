@@ -26,8 +26,9 @@ class DetailjasaController extends Controller
 
     	// mengambil data dari table pegawai sesuai pencarian data
 		$DetailJasa = DB::table('DetailJasa')
-		->where('Judul','like',"%".$cari."%")
+		->where('kategori','like',"%".$cari."%")
         ->orWhere('harga','like',"%".$cari."%")
+        ->orWhere('Judul','like',"%".$cari."%")
 		->paginate();
 
     		// mengirim data pegawai ke view index

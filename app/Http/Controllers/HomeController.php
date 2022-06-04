@@ -28,7 +28,7 @@ class HomeController extends Controller
     {
     	// mengambil data dari table pegawai
     	//$DetailJasa = DB::table('DetailJasa')->get();
-        $DetailJasa = DB::table('DetailJasa')->paginate(6) ;
+        $DetailJasa = DB::table('DetailJasa')->paginate(4) ;
 
 
     	// mengirim data pegawai ke view index
