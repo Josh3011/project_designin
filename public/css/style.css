@@ -78,7 +78,7 @@ height: 460px;
 }
 
 .cart button {
-    height: 83.08px;    
+    height: 83.08px;
 background: #FFFFFF;
 border: 1px solid #F32323;
 border-radius: 10px;
@@ -92,12 +92,14 @@ line-height: 23px;
 color: #2C2C2C;
 }
 
+
+
 .cart h3 {
     font-style: normal;
     font-weight: 700;
     font-size: 20px;
     line-height: 23px;
-    
+
     color: #2C2C2C;
 }
 
@@ -133,7 +135,7 @@ color: #64AE58;
 
 .cart .tagihan button {
     width: 413.21px;
-    height: 83.08px;    
+    height: 83.08px;
 background: #FF3322;
 border: 1px solid #F32323;
 border-radius: 10px;

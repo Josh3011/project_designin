@@ -13,7 +13,7 @@
   </head>
   <body style="overflow-x: hidden;">
 
-  <div class="container-fluid">
+  <div class="container">
 
     <nav class="row mt-4 px-3 justify-content-between">
         <div class="col-4"><img style="width: 60.92px; height: 68.31px;" src="/assets/design-in/hamburger.png" alt=""></div>
@@ -24,8 +24,8 @@
 
 
 
-    <div class="row px-3" style="margin-top: 152px;">
-      <div class="col-8 review">
+    <div class="row" style="margin-top: 100px;">
+      <div class="col-7 review">
         <h1 class="mb-5">Jasa yang dibeli</h1>
 
         <div class="row">
@@ -75,6 +75,7 @@
           <div class="row mt-5">
             <div class="col-9 ">
           <div style="border: 1px solid #FF3322" class="py-5 ps-3 pe-5 rounded" >
+            <form action="">
             <div class="d-flex justify-content-between list ">
             <div class="form-check">
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -141,6 +142,8 @@
               <h2>Rp. 100.000</h2>
             </div>
           </div>
+          <button class="form-control btn btn-danger text-white" type="submit">Submit</button>
+        </form>
           </div>
 
         </div>
@@ -150,7 +153,7 @@
       </div>
 
 
-      <div style="width: 483px; padding-left: 35px;" class="col-4 cart">
+      <div style="width: 483px; padding-left: 35px;" class="col-5 cart">
         <button class="px-3"><img style="width: 34px; height: 34px;" class="me-3" src="/assets/design-in/discount.png" alt=""> Makin hemat  pakai promo <img class="ms-5" src="/assets/design-in/arrow.png" alt=""> </button>
         <div>
           <h3 class="mt-4">Ringkasan Harga</h3>
