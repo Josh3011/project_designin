@@ -38,5 +38,6 @@ Route::get('gopay', function () {
 Route::get('detail_jasa', function () {
     return view('detail_jasa');
 });
-
-
+Route::get('metode_pembayaran', function () {
+    return view('metode_pembayaran');
+});
