@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+
+
 
 class HomeController extends Controller
 {
@@ -23,6 +26,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+    	// mengambil data dari table pegawai
+    	//$DetailJasa = DB::table('DetailJasa')->get();
+        $DetailJasa = DB::table('DetailJasa')->paginate(4) ;
+
+
+    	// mengirim data pegawai ke view index
+    	return view('home',['DetailJasa' => $DetailJasa]);
+
     }
 }
