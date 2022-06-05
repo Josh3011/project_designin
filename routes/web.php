@@ -41,3 +41,6 @@ Route::get('detail_jasa', function () {
 Route::get('metode_pembayaran', function () {
     return view('metode_pembayaran');
 });
+Route::get('akun_pengguna', function(){
+    return view('akunpengguna');
+});
