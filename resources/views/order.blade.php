@@ -75,10 +75,11 @@
           <div class="row mt-5">
             <div class="col-9 ">
           <div style="border: 1px solid #FF3322" class="py-5 ps-3 pe-5 rounded" >
-            <form action="">
+            <form action="/order" method="post">
+                {{csrf_field()}}
             <div class="d-flex justify-content-between list ">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 3 Hari Pengerjaan Ekstra Cepat
               </label>
@@ -89,7 +90,7 @@
           </div>
           <div class="d-flex justify-content-between list py-4">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Revisi Tambahan
               </label>
@@ -100,7 +101,7 @@
           </div>
           <div class="d-flex justify-content-between list" >
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 File Pengerjaan
               </label>
@@ -111,7 +112,7 @@
           </div>
           <div class="d-flex justify-content-between list py-4">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Karakter Tambahan
               </label>
@@ -122,7 +123,7 @@
           </div>
           <div class="d-flex justify-content-between list ">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Background/Latar Tambahan
               </label>
@@ -133,7 +134,7 @@
           </div>
           <div class="d-flex justify-content-between list py-4">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Penggunaan Komersial
               </label>

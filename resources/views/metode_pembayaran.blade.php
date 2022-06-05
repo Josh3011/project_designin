@@ -20,7 +20,13 @@
 
 <body>
     <style>
-
+        body {
+            background-color: white;
+            font-family: 'Raleway';
+            font-weight: 250;
+            height: 100vh;
+            margin: 0;
+        }
         form {
             width: 400px;
         }
@@ -28,12 +34,17 @@
             width: 480px;
 
         }
+        h1{
+            color: #FF3322;
+            font-size: 60px;
+            font-weight: 800;
+        }
     </style>
     <div class="container-lg p-5 mt-5 mx-auto justify-content-center">
 
-        <div style="border: 2px solid #000000" class="m-5 p-5 rounded position-absolute top-50 start-50 translate-middle mt-1">
+        <div class="m-5 p-5 rounded position-absolute top-50 start-50 translate-middle mt-1 bg">
 
-            <img class="mx-auto d-block" width="100" src="/assets/design-in/Design.in.png">
+            <h1 class="mx-auto text-center">Design.in</h1>
 
             <h3 class="mx-auto text-center">METODE PEMBAYARAN</h3>
 
@@ -44,11 +55,11 @@
                 <div class="row">
 
                         <div class="mb-3 mt-3">
-                            <label for="metode pembayaran" class="form-label">Pilih Metode Pembayaran: </label>
+                            <label for="metode pembayaran" class="form-label">Metode Pembayaran: </label>
                             <select class="form-select" id="metodepembayaran" name="metodepembayaran">
                                 <option value="" readonly="true" hidden="true">Pilih Metode Pembayaran</option>
                                 <option value="BANK">TRANSFER BANK (BRI 23048230482103948239048)</option>
-                                <option value="E-WALLET">E-WALLET (Shoope Pay 0823498230948230948)</option>
+                                <option value="E-WALLET">E-WALLET (Shoope Pay 081282383710)</option>
                             </select>
                         </div>
                     </div>

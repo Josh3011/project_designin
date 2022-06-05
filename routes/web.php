@@ -29,6 +29,9 @@ Route::get('/detail_jasa/{id}','DetailjasaController@view');
 Route::get('order', function () {
     return view('order');
 });
+
+Route::post('order', 'OrderController@storeaddons');
+
 Route::get('visa', function () {
     return view('visa');
 });
