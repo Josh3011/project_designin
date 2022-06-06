@@ -34,16 +34,29 @@ class OrderController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
 
     }
 
 
     public function storeaddons(Request $request) {
-        DB::table('orderjasa')->insert([
-            'addons' => $request->addons,
-        ]);
+        // DB::table('addons')->insert([
+        //     'nama_addons' => $request->addons,
+
+        // ]);
+        $addons = $request->input('nama_addons');
+        if (is_array($addons) || is_object($addons)) {
+            foreach($addons as $addon){
+                $total = $addon;
+                $total = $total + $addon;
+               }
+               DB::table('orderjasa')->insert([
+                'addons' => $total
+            ]);
+        }
+
+
     }
 
     /**
