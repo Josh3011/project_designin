@@ -44,12 +44,13 @@
         }
 
         .drop-menu {
-            background-color: red;
+            background-color: #ff1a1a;
         }
-        .footer{
-        background-color: red;
-        border-top: 1px solid black;
-    }
+
+        .footer {
+            background-color: red;
+            border-top: 1px solid black;
+        }
 
     </style>
     <!-- bootstrap -->
@@ -67,6 +68,16 @@
                     <a class="btn" data-toggle="dropdown">
                         <span class="glyphicon glyphicon-align-justify"></span></a>
                     <ul class="dropdown-menu">
+                        <li>
+
+                                    <form action="/listjasa2/cari" method="GET">
+                                        <input class="form-control" type="text" name="cari"
+                                            placeholder="Cari Jasa berdasarkan Judul" value="{{ old('cari') }}">
+                                        <input class="form-control btn-default btn-xs" type="submit" value="Find">
+                                    </form>
+
+                        </li>
+
                         <li><a class="drop" href="#"><span class="glyphicon glyphicon-user"></span> MY
                                 ACCOUNT</a></li>
                         <li><a class="drop" href="/listjasa2"><span class="glyphicon glyphicon-book"></span>
@@ -81,7 +92,7 @@
                 </li>
             </ul>
             <div class="navbar-header">
-                <a class="navbar-brand" style="color:red" href="{{ url('/home') }}">
+                <a class="navbar-brand" style="color: #ff1a1a" href="{{ url('/home') }}">
                     Design.In
                 </a>
             </div>
@@ -105,7 +116,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                             document.getElementById('logout-form').submit();">
+                                                                                                 document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

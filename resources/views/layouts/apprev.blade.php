@@ -44,12 +44,17 @@
         }
 
         .drop-menu {
-            background-color: red;
+            background-color: #ff1a1a;
         }
-        .footer{
-        background-color: red;
-        border-top: 1px solid black;
-    }
+
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            background-color:#ff6666;
+            text-align: center;
+        }
 
     </style>
     <!-- bootstrap -->
@@ -63,7 +68,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" style="color:red" href="{{ url('/home') }}">
+                <a class="navbar-brand" style="color:#ff1a1a" href="{{ url('/home') }}">
                     Design.In
                 </a>
             </div>
@@ -87,7 +92,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                             document.getElementById('logout-form').submit();">
+                                                                                                 document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 

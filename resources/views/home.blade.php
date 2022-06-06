@@ -3,10 +3,9 @@
 @section('content')
     <div class="container">
         <div class="container">
-            <div class="jumbotron">
-                <div class="container text-center">
-                  <h2>WELCOME BACK,</h2>
-                  <p> Exploring a world full of creativity </p>
+            <div class="page-header">
+                <div>
+                  <h4>Welcome Back, {{ Auth::user()->name }}</h4>
                 </div>
               </div>
               <div id="myCarousel" class="carousel slide" data-ride="carousel">
