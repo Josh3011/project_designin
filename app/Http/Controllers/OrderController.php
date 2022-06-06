@@ -15,7 +15,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        //
+        return view('order');
     }
 
     /**
@@ -39,7 +39,7 @@ class OrderController extends Controller
 
     }
 
-    
+
     public function storeaddons(Request $request) {
         DB::table('orderjasa')->insert([
             'addons' => $request->addons,

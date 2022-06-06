@@ -47,3 +47,5 @@ Route::get('metode_pembayaran', function () {
 Route::get('akun_pengguna', function(){
     return view('akunpengguna');
 });
+
+Route::get('metode_pembayaran', 'MetodePembayaranController@index');

@@ -15,11 +15,11 @@
 
   <div class="container">
 
-    <nav class="row mt-4 px-3 justify-content-between">
+    {{-- <nav class="row mt-4 px-3 justify-content-between">
         <div class="col-4"><img style="width: 60.92px; height: 68.31px;" src="/assets/design-in/hamburger.png" alt=""></div>
         <div class="col-4 align-self-center text-center "><img style="width: 130px; height: 35px;" src="/assets/design-in/Design.in.png" alt=""></div>
         <div class="col-4 align-self-center text-end"><img style="width: 57px; height: 50.67px;" src="/assets/design-in/search.png" alt=""></div>
-    </nav>
+    </nav> --}}
 
 
 
@@ -176,7 +176,9 @@
               <h2>Total Tagihan</h2>
               <h4>Rp220.000</h4>
             </div>
+            <a href="metode_pembayaran">
             <button class="mt-5"> <img src="/assets/design-in/cart.png" style="width: 39px;" alt=""> Beli Sekarang </button>
+        </a>
           </div>
         </div>
         </div>

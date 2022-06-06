@@ -1,7 +1,7 @@
 @extends('layouts.apprev')
 
 @section('content')
-    <div class="thumbnail container">
+    <div class="container mt-5">
         <center>
             <h2>SIGN IN</h2>
         </center>

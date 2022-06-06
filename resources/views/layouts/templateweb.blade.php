@@ -14,13 +14,22 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
 
     <!-- Styles -->
     <style>
+        body {
+            font-family: 'Raleway';
+            font-weight: 600;
+            height: 100vh;
+            margin: 0;
+        }
         .warnahuruf {
-            color: red;
+            color: #FF3232;
+
         }
 
         .row {
@@ -44,11 +53,11 @@
         }
 
         .drop-menu {
-            background-color: #ff1a1a;
+            background-color: #FF3232;
         }
 
         .footer {
-            background-color: red;
+            background-color: FF3232;
             border-top: 1px solid black;
         }
 
@@ -93,7 +102,7 @@
             </ul>
             <div class="navbar-header">
                 <a class="navbar-brand" style="color: #ff1a1a" href="{{ url('/home') }}">
-                    Design.In
+                    Design.in
                 </a>
             </div>
             <ul class="nav navbar-nav navbar-right">

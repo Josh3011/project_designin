@@ -28,7 +28,7 @@
         }
 
         .warnahuruf {
-            color: red;
+            color: #FF3232;
         }
 
         .row {
