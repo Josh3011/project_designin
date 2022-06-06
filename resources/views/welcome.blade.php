@@ -8,18 +8,19 @@
     <title>Laravel</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Styles -->
     <style>
         html,
         body {
             background-color: white;
-            color: #ff5050;
-            font-family: 'Monaco';
-            font-weight: 250;
-            height: 100vh;
-            margin: 0;
+            background-image: url('/assets/design-in/backgrnd.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position-x: 380px;
+            background-position-y: 325px;
         }
 
         .full-height {
@@ -43,11 +44,16 @@
         }
 
         .content {
-            text-align: center;
+            color: #ff5050;
+            font-family: 'Raleway';
+            font-weight: 250;
+            margin-top: 0px;
+
         }
 
         .title {
             font-size: 84px;
+            font-weight: 900;
         }
 
         .links>a {
@@ -85,7 +91,7 @@
 
         <div class="content">
             <div class="title m-b-md">
-                Design.In
+                Design.in
             </div>
         </div>
 

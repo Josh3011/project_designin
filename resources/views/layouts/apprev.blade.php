@@ -19,6 +19,14 @@
 
     <!-- Styles -->
     <style>
+        body {
+            background-image: url('/assets/design-in/backgrnd.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position-x: 380px;
+            background-position-y: 235px;
+        }
+
         .warnahuruf {
             color: red;
         }
@@ -44,13 +52,17 @@
         }
 
         .drop-menu {
-            background-color: red;
+            background-color: #ff1a1a;
         }
-        .footer{
-        background-color: red;
-        border-top: 1px solid black;
-    }
 
+        .footer {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            background-color: #ff6666;
+            text-align: center;
+        }
     </style>
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -63,7 +75,7 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" style="color:red" href="{{ url('/home') }}">
+                <a class="navbar-brand" style="color:#ff1a1a" href="{{ url('/home') }}">
                     Design.In
                 </a>
             </div>
@@ -87,7 +99,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                             document.getElementById('logout-form').submit();">
+                                                                                                         document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 
@@ -105,7 +117,7 @@
     <main class="py-4">
         @yield('content')
     </main>
-    </div>
+
 
 </body>
 

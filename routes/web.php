@@ -23,12 +23,15 @@ Route::get('/home', 'HomeController@index')->name('home');
 //Route Detail Jasa by Josha
 Route::get('/listjasa2','DetailjasaController@index');
 Route::get('/listjasa2/cari','DetailjasaController@cari');
-Route::get('/detail_jasa/{id}','DetailjasaController@view');
+Route::get('/detail_jasa/{id}','DetailjasaController@view')->name('detailjasa');
 
 //order
 Route::get('order', function () {
     return view('order');
 });
+
+Route::post('order', 'OrderController@storeaddons');
+
 Route::get('visa', function () {
     return view('visa');
 });
