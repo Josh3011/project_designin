@@ -47,3 +47,6 @@ Route::get('metode_pembayaran', function () {
 Route::get('akun_pengguna', function(){
     return view('akunpengguna');
 });
+Route::get('shoppingcart', function () {
+    return view('shoppingcart');
+});
