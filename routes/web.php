@@ -29,6 +29,9 @@ Route::get('/detail_jasa/{id}','DetailjasaController@view')->name('detailjasa');
 Route::get('order', function () {
     return view('order');
 });
+
+Route::post('order', 'OrderController@storeaddons');
+
 Route::get('visa', function () {
     return view('visa');
 });
@@ -38,5 +41,6 @@ Route::get('gopay', function () {
 Route::get('detail_jasa', function () {
     return view('detail_jasa');
 });
-
-
+Route::get('metode_pembayaran', function () {
+    return view('metode_pembayaran');
+});
