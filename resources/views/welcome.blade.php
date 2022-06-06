@@ -16,11 +16,11 @@
         html,
         body {
             background-color: white;
-            color: #ff5050;
-            font-family: 'Raleway';
-            font-weight: 250;
-            height: 100vh;
-            margin: 0;
+            background-image: url('/assets/design-in/backgrnd.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position-x: 380px;
+            background-position-y: 325px;
         }
 
         .full-height {
@@ -44,7 +44,11 @@
         }
 
         .content {
-            text-align: center;
+            color: #ff5050;
+            font-family: 'Raleway';
+            font-weight: 250;
+            margin-top: 0px;
+
         }
 
         .title {
