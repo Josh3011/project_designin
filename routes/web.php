@@ -49,3 +49,6 @@ Route::get('akun_pengguna', function(){
 });
 
 Route::get('metode_pembayaran', 'MetodePembayaranController@index');
+Route::get('shoppingcart', function () {
+    return view('shoppingcart');
+});
