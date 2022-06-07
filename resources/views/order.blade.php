@@ -15,11 +15,11 @@
 
   <div class="container">
 
-    <nav class="row mt-4 px-3 justify-content-between">
+    {{-- <nav class="row mt-4 px-3 justify-content-between">
         <div class="col-4"><img style="width: 60.92px; height: 68.31px;" src="/assets/design-in/hamburger.png" alt=""></div>
         <div class="col-4 align-self-center text-center "><img style="width: 130px; height: 35px;" src="/assets/design-in/Design.in.png" alt=""></div>
         <div class="col-4 align-self-center text-end"><img style="width: 57px; height: 50.67px;" src="/assets/design-in/search.png" alt=""></div>
-    </nav>
+    </nav> --}}
 
 
 
@@ -79,7 +79,7 @@
                 {{csrf_field()}}
             <div class="d-flex justify-content-between list ">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="100000" name="nama_addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 3 Hari Pengerjaan Ekstra Cepat
               </label>
@@ -90,29 +90,29 @@
           </div>
           <div class="d-flex justify-content-between list py-4">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="70000" name="nama_addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Revisi Tambahan
               </label>
             </div>
             <div>
-              <h2>Rp. 100.000</h2>
+              <h2>Rp. 70.000</h2>
             </div>
           </div>
           <div class="d-flex justify-content-between list" >
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="70000" name="nama_addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 File Pengerjaan
               </label>
             </div>
             <div>
-              <h2>Rp. 100.000</h2>
+              <h2>Rp. 70.000</h2>
             </div>
           </div>
           <div class="d-flex justify-content-between list py-4">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="100000" name="nama_addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Karakter Tambahan
               </label>
@@ -123,7 +123,7 @@
           </div>
           <div class="d-flex justify-content-between list ">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="100000" name="nama_addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Background/Latar Tambahan
               </label>
@@ -134,13 +134,13 @@
           </div>
           <div class="d-flex justify-content-between list py-4">
             <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" name="addons[]" id="flexCheckDefault">
+              <input class="form-check-input" type="checkbox" value="300000" name="nama_addons[]" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault">
                 Penggunaan Komersial
               </label>
             </div>
             <div>
-              <h2>Rp. 100.000</h2>
+              <h2>Rp. 300.000</h2>
             </div>
           </div>
           <button class="form-control btn btn-danger text-white" type="submit">Submit</button>
@@ -155,8 +155,7 @@
 
 
       <div style="width: 483px; padding-left: 35px;" class="col-5 cart">
-        <button class="px-3"><img style="width: 34px; height: 34px;" class="me-3" src="/assets/design-in/discount.png" alt=""> Makin hemat  pakai promo <img class="ms-5" src="/assets/design-in/arrow.png" alt=""> </button>
-        <div>
+        <div style="margin-top: 60px;">
           <h3 class="mt-4">Ringkasan Harga</h3>
           <div class="row">
             <div class="col-11">
@@ -176,7 +175,11 @@
               <h2>Total Tagihan</h2>
               <h4>Rp220.000</h4>
             </div>
+            <a href="metode_pembayaran">
+                <div style="margin-top: 60px;">
             <button class="mt-5"> <img src="/assets/design-in/cart.png" style="width: 39px;" alt=""> Beli Sekarang </button>
+        </div>
+        </a>
           </div>
         </div>
         </div>

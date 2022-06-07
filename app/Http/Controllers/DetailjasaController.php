@@ -12,11 +12,11 @@ class DetailjasaController extends Controller
     {
     	// mengambil data dari table pegawai
     	//$DetailJasa = DB::table('DetailJasa')->get();
-        $DetailJasa = DB::table('DetailJasa')->paginate(3) ;
+        $DetailJasa = DB::table('detailjasa')->fisrt() ;
 
 
     	// mengirim data pegawai ke view index
-    	return view('daftarjasa.listjasa2',['DetailJasa' => $DetailJasa]);
+    	return view('daftarjasa.listjasa2', compact('detailjasa'));
 
     }
     public function cari(Request $request)
