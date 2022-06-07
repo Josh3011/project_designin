@@ -1,3 +1,6 @@
+@extends('layouts.templatewebng')
+
+@section('content')
 <!doctype html>
 <html lang="en">
 
@@ -42,7 +45,7 @@
     </style>
     <div class="container-lg p-5 mt-5 mx-auto justify-content-center">
 
-        <div class="m-5 p-5 rounded position-absolute top-50 start-50 translate-middle mt-1 bg">
+        <div style="box-shadow: 0px 15px 20px 0px #d1d1d1; border-radius: 20px; " class= "m-5 p-5 position-absolute top-50 start-50 translate-middle mt-1 bg">
 
             <h1 class="mx-auto text-center">Design.in</h1>
 
@@ -85,3 +88,4 @@
 </body>
 
 </html>
+@endsection

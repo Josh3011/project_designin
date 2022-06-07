@@ -14,21 +14,22 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- Styles -->
     <style>
         body {
             background-image: url('/assets/design-in/backgrnd.png');
             background-repeat: no-repeat;
             background-attachment: fixed;
-            background-position-x: 380px;
-            background-position-y: 235px;
+            background-position-x: 1000px;
+            background-position-y: 280px;
         }
 
         .warnahuruf {
             color: #FF3232;
+            font-family: 'Raleway';
         }
 
         .row {
@@ -59,9 +60,9 @@
             position: absolute;
             bottom: 0;
             width: 100%;
-            height: 30px;
+            height: 50px;
             background-color: #ff6666;
-            text-align: center;
+            vertical-align: baseline;
         }
     </style>
     <!-- bootstrap -->
