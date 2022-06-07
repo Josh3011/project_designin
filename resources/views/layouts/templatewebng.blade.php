@@ -17,6 +17,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Baskervville&family=Montserrat:wght@400;500;600;700&family=Raleway:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/templatemo.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Load fonts style after rendering the layout styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
+    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
 
 
 
@@ -28,6 +41,7 @@
             height: 100vh;
             margin: 0;
         }
+
         .warnahuruf {
             color: #FF3232;
 
@@ -61,52 +75,36 @@
             background-color: FF3232;
             border-top: 1px solid black;
         }
-
     </style>
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-expand-sm bg-light navbar-default">
         <div class="container-fluid">
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a class="btn" data-toggle="dropdown">
-                        <span class="glyphicon glyphicon-align-justify"></span></a>
-                    <ul class="dropdown-menu">
-                        <li>
-
-                                    <form action="/listjasa2/cari" method="GET">
-                                        <input class="form-control" type="text" name="cari"
-                                            placeholder="Cari Jasa berdasarkan Judul" value="{{ old('cari') }}">
-                                        <input class="form-control btn-default btn-xs" type="submit" value="Find">
-                                    </form>
-
-                        </li>
-
-                        <li><a class="drop" href="#"><span class="glyphicon glyphicon-user"></span> MY
-                                ACCOUNT</a></li>
-                        <li><a class="drop" href="/listjasa2"><span class="glyphicon glyphicon-book"></span>
-                                DAFTAR PRODUK</a></li>
-                        <li><a class="drop" href="#"><span class="glyphicon glyphicon-user"></span>SHOPPING
-                                CART</a></li>
-                        <li><a class="drop" href="#"><span class="glyphicon glyphicon-user"></span>MY
-                                ORDER</a></li>
-
-
-                    </ul>
-                </li>
-            </ul>
-            <div class="navbar-header">
-                <a class="navbar-brand" style="color: #ff1a1a" href="{{ url('/home') }}">
-                    Design.in
-                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="btn" data-toggle="dropdown">
+                            <span class="bi bi-justify"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="/listjasa2">OUR PRODUCT</a></li>
+                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </div>
+            <a class="navbar-brand justify-content-center text-danger" href="{{ url('/home') }}">Design.In</a>
             <ul class="nav navbar-nav navbar-right">
                 @guest
                     <li class="nav-item">
@@ -119,7 +117,7 @@
                     @endif
                 @else
                     <li class="nav-item dropdown">
-                        <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                        <a id="navbarDropdown" class="nav-link dropdown-toggle text-dark" href="#" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }} <span class="caret"></span>
                         </a>
@@ -127,7 +125,7 @@
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                             <a class="dropdown-item" href="{{ route('logout') }}"
                                 onclick="event.preventDefault();
-                                                                                                 document.getElementById('logout-form').submit();">
+                                                                                                         document.getElementById('logout-form').submit();">
                                 {{ __('Logout') }}
                             </a>
 
@@ -139,13 +137,14 @@
                 @endguest
 
             </ul>
+
         </div>
     </nav>
 
     <main class="py-4">
         @yield('content')
     </main>
-    </div>
+
 
 </body>
 

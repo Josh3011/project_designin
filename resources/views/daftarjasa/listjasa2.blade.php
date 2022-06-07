@@ -1,79 +1,57 @@
-@extends('layouts.templateweb')
+@extends('layouts.templatewebng')
 
 @section('content')
-
-    <body class="w3-light-grey w3-content" style="max-width:1600px">
-
-        <!-- FILTER -->
-        <div class="navbar col-sm-2">
-            <h3> FILTER : </h3>
-            <ul class="nav nav-pills nav-stacked">
-                <li>
-                    <p><b>Kategori:</b></p>
-                    <form action="/listjasa2/cari" method="GET">
-                        <select class="dropdown" id="kategori" name="cari" value="{{ old('cari') }}">
-                            <option value="Foto">Foto</option>
-                            <option value="Video">Video</option>
-                            <option value="Poster">Poster</option>
-                        </select>
-
-                        <input class="form-control btn-danger" type="submit" value="FILTER">
-                    </form>
-                </li>
-                <li>
-                    <p><b>Judul:</b></p>
-                    <form action="/listjasa2/cari" method="GET">
-                        <input class="form-control" type="text" name="cari" placeholder="Cari Jasa berdasarkan Judul"
-                            value="{{ old('cari') }}">
-                        <input class="form-control btn-danger btn-xs" type="submit" value="FILTER">
-                    </form>
-                </li>
-                <li>
-                    <p><b>Harga:</b></p>
-                    <form action="/listjasa2/cari" method="GET">
-                        <input class="form-control" type="text" name="cari" placeholder="Cari jasa Berdasarkan Harga"
-                            value="{{ old('cari') }}">
-                        <input class="form-control btn-danger btn-xs" type="submit" value="FILTER">
-                    </form>
-                </li>
-
-            </ul>
-        </div>
+    <!-- !PAGE CONTENT! -->
 
 
-        <!-- !PAGE CONTENT! -->
-        <div class="w3-main" style="margin-left:300px">
 
-            <!-- Header -->
-            <header id="foto">
-                <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
-                        class="fa fa-bars"></i></span>
-                <div class="w3-container">
-                    <h1><b>Our Product</b></h1>
-                </div>
+    <!-- content-->
+    <div class="container py-5">
+        <div class="row">
 
-            </header>
+            <div class="col-lg-3">
+                <h1 class="h2 pb-4">Categories</h1>
+                <ul class="list-unstyled templatemo-accordion">
+                    <li class="pb-3">
+                        <form action="/listjasa2/cari" method="GET">
+                            <select class="dropdown" id="kategori" name="cari" value="{{ old('cari') }}">
+                                <option value="Foto">Foto</option>
+                                <option value="Video">Video</option>
+                                <option value="Poster">Poster</option>
+                            </select>
 
+                            <input class="btn btn-dark btn-sm" type="submit" value="FILTER">
+                        </form>
 
-            <!-- Second Photo Grid-->
-            @foreach ($DetailJasa as $d)
-                <div class="col-sm-4">
-                    <div class="thumbnail">
-                        <img src="/assets/design-in/{{ $d->Foto }}" class="img-responsive" style="width:500px"
-                            alt="Image">
-                        <div class="caption">
-                            <a href="/detail_jasa/{{ $d->ID }}">
-                                <h4>{{ $d->Judul }}</h4>
-                            </a>
-                            <h6>{{ $d->harga }}</h6>
-                            <p>{{ $d->DeskripsiJasa }}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-9">
+                <h2> OUR PRODUCT </h2>
+                <div class="row">
+                    @foreach ($DetailJasa as $d)
+                        <div class="col-sm-4">
+                            <div class="card mb-4 product-wap rounded-0">
+                                <div class="card rounded-0">
+                                    <img class="card-img rounded-0 img-fluid" src="/assets/design-in/{{ $d->Foto }}">
+                                </div>
+                                <div class="card-body">
+                                    <a href="/detail_jasa/{{ $d->ID }}"
+                                        class="h3 text-center">{{ $d->Judul }}</a>
+                                    <h4 class="mb-0">{{ $d->harga }}</h4>
+                                    <p>{{ $d->DeskripsiJasaSingkat }}</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
+                    @endforeach
                 </div>
-            @endforeach
+            </div>
+
+
 
 
             <!-- Pagination -->
             {{ $DetailJasa->links() }}
         </div>
-    @endsection
+    </div>
+@endsection

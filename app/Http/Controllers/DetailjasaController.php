@@ -12,11 +12,10 @@ class DetailjasaController extends Controller
     {
     	// mengambil data dari table pegawai
     	//$DetailJasa = DB::table('DetailJasa')->get();
-        $DetailJasa = DB::table('detailjasa')->fisrt() ;
-
+		$DetailJasa = DB::table('DetailJasa')->paginate(6) ;
 
     	// mengirim data pegawai ke view index
-    	return view('daftarjasa.listjasa2', compact('detailjasa'));
+    	return view('daftarjasa.listjasa2',['DetailJasa' => $DetailJasa]);;
 
     }
     public function cari(Request $request)
@@ -35,4 +34,10 @@ class DetailjasaController extends Controller
 		return view('daftarjasa.listjasa2',['DetailJasa' => $DetailJasa]);
 
 	}
+    public function view($id)
+    {
+        $DetailJasa = DB::table('DetailJasa')->where('ID',$id)->get();
+        return view('detail_jasa',['DetailJasa' => $DetailJasa]);
+
+    }
 }
