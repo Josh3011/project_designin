@@ -35,4 +35,10 @@ class DetailjasaController extends Controller
 		return view('daftarjasa.listjasa2',['DetailJasa' => $DetailJasa]);
 
 	}
+    public function view($id)
+    {
+        $DetailJasa = DB::table('DetailJasa')->where('ID',$id)->get();
+        return view('detail_jasa',['DetailJasa' => $DetailJasa]);
+
+    }
 }
