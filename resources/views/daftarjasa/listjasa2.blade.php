@@ -66,7 +66,7 @@
                                 <h4>{{ $d->Judul }}</h4>
                             </a>
                             <h6>{{ $d->harga }}</h6>
-                            <p>{{ $d->DeskripsiJasa }}</p>
+                            <p>{{ $d->DeskripsiJasaSingkat }}</p>
                         </div>
                     </div>
                 </div>
