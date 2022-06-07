@@ -105,7 +105,7 @@
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                            {{ Auth::user()->name }} <span class="caret"></span>
+                            {{ Auth::user()->name }}
                         </a>
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
@@ -130,29 +130,23 @@
 	<div class="container mt-5">
 		<div class="row">
 		@foreach ($DetailJasa as $d)
-			<div class="col-7">
-				<img src="/assets/design-in/{{ $d->Foto }}" style="width: 500px;" alt="">>
+			<div class="col-6">
+				<img src="/assets/design-in/{{ $d->Foto }}" style="width: 500px;" alt="">
 
-
-				<div class="d-flex justify-content-start py-5">
+                <hr class="bg-dark border-2 border-top border-secondary">
+				<div class="d-flex justify-content-start py-1">
 					<div class="pe-5">
-						<img class="x"
-							src="https://th.bing.com/th/id/R.4deadb53c80590202ce6b72da578b357?rik=QO6f5T6SAeTGig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3XT2rW1AQhw%2fVMt4vbpt1VI%2fAAAAAAAAAIk%2fBEy2EK4EXMw%2fs1600%2fnyanbooru.com_-_348_-_Kagami_Hiiragi_blue_hair_chibi_cute_hatsune_miku_kagamiku_long_hair_lucky_star_twintails_vocaloid%5b1%5d.jpg&ehk=MYGIPZxmke3%2f8dbqjQ5WdvFZi%2b7GoeWlAlLJZNLFSf8%3d&risl=&pid=ImgRaw&r=0"
-							style="width: 75px;" alt="">
+						<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
 					</div>
 					<div class="px-5">
-						<img class="x"
-							src="https://th.bing.com/th/id/R.4deadb53c80590202ce6b72da578b357?rik=QO6f5T6SAeTGig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3XT2rW1AQhw%2fVMt4vbpt1VI%2fAAAAAAAAAIk%2fBEy2EK4EXMw%2fs1600%2fnyanbooru.com_-_348_-_Kagami_Hiiragi_blue_hair_chibi_cute_hatsune_miku_kagamiku_long_hair_lucky_star_twintails_vocaloid%5b1%5d.jpg&ehk=MYGIPZxmke3%2f8dbqjQ5WdvFZi%2b7GoeWlAlLJZNLFSf8%3d&risl=&pid=ImgRaw&r=0"
-							style="width: 75px;" alt="">
+						<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
 					</div>
 					<div class="px-5">
-						<img class="x"
-							src="https://th.bing.com/th/id/R.4deadb53c80590202ce6b72da578b357?rik=QO6f5T6SAeTGig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3XT2rW1AQhw%2fVMt4vbpt1VI%2fAAAAAAAAAIk%2fBEy2EK4EXMw%2fs1600%2fnyanbooru.com_-_348_-_Kagami_Hiiragi_blue_hair_chibi_cute_hatsune_miku_kagamiku_long_hair_lucky_star_twintails_vocaloid%5b1%5d.jpg&ehk=MYGIPZxmke3%2f8dbqjQ5WdvFZi%2b7GoeWlAlLJZNLFSf8%3d&risl=&pid=ImgRaw&r=0"
-							style="width: 75px;" alt="">
+						<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
 					</div>
 					<div></div>
 				</div>
-
+                <hr class="bg-dark border-2 border-top border-secondary">
 				<h3 class="mt-4"><b>Ulasan Pembeli </b> (57)</h3>
 
 				<br>
@@ -160,7 +154,7 @@
 				<div class="d-flex justify-content-start">
 					<div>
 						<center>
-							<h1>4.7<span style="font-size: 0.8rem;">/5</span></h1>
+							<h1>4.7<span style="font-size: 20px;">/5</span></h1>
 							<p><i class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i
 									class="fas fa-star text-warning"></i> <i class="fas fa-star text-warning"></i> <i
 									class="fas fa-star-half-alt text-warning"></i></p>
@@ -206,13 +200,12 @@
 					</tr>
 				</table>
 				<p>{{ $d->DeskripsiJasa }}</p>
-				<hr>
+				<hr class="bg-dark border-2 border-top border-secondary">
 
 				<div class="d-flex justify-content-between">
 					<div class="d-flex justify-content-between">
 						<div>
-							<img src="https://th.bing.com/th/id/R.deb5809e8443b029715ed16d2a12ade0?rik=DKKsTLiGizESlA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Pk2WR63BUxM%2fUp3uV2qlUgI%2fAAAAAAAABDo%2fe-ZmQ0TRMQs%2fs1600%2ffacebook-profile-pictures741.jpg&ehk=ZcmuzEOP6%2fYjfKnVv%2fG9%2fLrZLoLGckKeU%2fTQJPVKCC8%3d&risl=&pid=ImgRaw&r=0"
-								width="50" class="rounded-circle" alt="">
+							<img src="/assets/design-in/profile-icon.png" style="width: 50px;" class="rounded" alt="">
 						</div>
 						<div style="margin-left: 20px;">
 							<p>AkunPenjual<br><b><span class="pink">Online</span></b></p>
@@ -226,7 +219,7 @@
 				</div>
 				<p><i class="fas fa-star pink"></i><b>4.5</b> rata-rata ulasan</p>
 
-				<hr>
+				<hr class="bg-dark border-2 border-top border-secondary">
 				<br><br><br><br><br>
 
 
@@ -244,24 +237,19 @@
 
 			<div class="d-flex justify-content-start">
 				<div class="me-5">
-					<img src="https://th.bing.com/th/id/R.deb5809e8443b029715ed16d2a12ade0?rik=DKKsTLiGizESlA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Pk2WR63BUxM%2fUp3uV2qlUgI%2fAAAAAAAABDo%2fe-ZmQ0TRMQs%2fs1600%2ffacebook-profile-pictures741.jpg&ehk=ZcmuzEOP6%2fYjfKnVv%2fG9%2fLrZLoLGckKeU%2fTQJPVKCC8%3d&risl=&pid=ImgRaw&r=0"
-						width="100px" class="rounded" alt="">
+					<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" class="rounded" alt="">
 				</div>
 				<div class="me-5">
-					<img src="https://th.bing.com/th/id/R.deb5809e8443b029715ed16d2a12ade0?rik=DKKsTLiGizESlA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Pk2WR63BUxM%2fUp3uV2qlUgI%2fAAAAAAAABDo%2fe-ZmQ0TRMQs%2fs1600%2ffacebook-profile-pictures741.jpg&ehk=ZcmuzEOP6%2fYjfKnVv%2fG9%2fLrZLoLGckKeU%2fTQJPVKCC8%3d&risl=&pid=ImgRaw&r=0"
-						width="100px" class="rounded" alt="">
+					<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" class="rounded" alt="">
 				</div>
 				<div class="me-5">
-					<img src="https://th.bing.com/th/id/R.deb5809e8443b029715ed16d2a12ade0?rik=DKKsTLiGizESlA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Pk2WR63BUxM%2fUp3uV2qlUgI%2fAAAAAAAABDo%2fe-ZmQ0TRMQs%2fs1600%2ffacebook-profile-pictures741.jpg&ehk=ZcmuzEOP6%2fYjfKnVv%2fG9%2fLrZLoLGckKeU%2fTQJPVKCC8%3d&risl=&pid=ImgRaw&r=0"
-						width="100px" class="rounded" alt="">
+					<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" class="rounded" alt="">
 				</div>
 				<div class="me-5">
-					<img src="https://th.bing.com/th/id/R.deb5809e8443b029715ed16d2a12ade0?rik=DKKsTLiGizESlA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Pk2WR63BUxM%2fUp3uV2qlUgI%2fAAAAAAAABDo%2fe-ZmQ0TRMQs%2fs1600%2ffacebook-profile-pictures741.jpg&ehk=ZcmuzEOP6%2fYjfKnVv%2fG9%2fLrZLoLGckKeU%2fTQJPVKCC8%3d&risl=&pid=ImgRaw&r=0"
-						width="100px" class="rounded" alt="">
+					<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" class="rounded" alt="">
 				</div>
 				<div class="me-5">
-					<img src="https://th.bing.com/th/id/R.deb5809e8443b029715ed16d2a12ade0?rik=DKKsTLiGizESlA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-Pk2WR63BUxM%2fUp3uV2qlUgI%2fAAAAAAAABDo%2fe-ZmQ0TRMQs%2fs1600%2ffacebook-profile-pictures741.jpg&ehk=ZcmuzEOP6%2fYjfKnVv%2fG9%2fLrZLoLGckKeU%2fTQJPVKCC8%3d&risl=&pid=ImgRaw&r=0"
-						width="100px" class="rounded" alt="">
+					<img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" class="rounded" alt="">
 				</div>
 			</div>
 
@@ -278,12 +266,11 @@
 			<div class="d-flex justify-content-start">
 				<div class="me-5">
 					<div class="card" style="width: 150px;">
-						<img src="https://th.bing.com/th/id/R.4deadb53c80590202ce6b72da578b357?rik=QO6f5T6SAeTGig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3XT2rW1AQhw%2fVMt4vbpt1VI%2fAAAAAAAAAIk%2fBEy2EK4EXMw%2fs1600%2fnyanbooru.com_-_348_-_Kagami_Hiiragi_blue_hair_chibi_cute_hatsune_miku_kagamiku_long_hair_lucky_star_twintails_vocaloid%5b1%5d.jpg&ehk=MYGIPZxmke3%2f8dbqjQ5WdvFZi%2b7GoeWlAlLJZNLFSf8%3d&risl=&pid=ImgRaw&r=0"
+						<img src="/assets/design-in/data.jpeg"
 							class="card-img-top" width="100px" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's content.</p>
+							<h5 class="card-title">Judul</h5>
+							<p class="card-text">Deskripsi tentang konten yang dijual</p>
 							<div class="d-flex justify-content-between">
 								<div><i class="fas fa-star pink"></i> <b>4.7</b></div>
 								<div>lorem, ipsum</div>
@@ -293,12 +280,11 @@
 				</div>
 				<div class="me-5">
 					<div class="card" style="width: 150px;">
-						<img src="https://th.bing.com/th/id/R.4deadb53c80590202ce6b72da578b357?rik=QO6f5T6SAeTGig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3XT2rW1AQhw%2fVMt4vbpt1VI%2fAAAAAAAAAIk%2fBEy2EK4EXMw%2fs1600%2fnyanbooru.com_-_348_-_Kagami_Hiiragi_blue_hair_chibi_cute_hatsune_miku_kagamiku_long_hair_lucky_star_twintails_vocaloid%5b1%5d.jpg&ehk=MYGIPZxmke3%2f8dbqjQ5WdvFZi%2b7GoeWlAlLJZNLFSf8%3d&risl=&pid=ImgRaw&r=0"
+						<img src="/assets/design-in/data.jpeg"
 							class="card-img-top" width="100px" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's content.</p>
+							<h5 class="card-title">Judul</h5>
+							<p class="card-text">Deskripsi tentang konten yang dijual</p>
 							<div class="d-flex justify-content-between">
 								<div><i class="fas fa-star pink"></i> <b>4.7</b></div>
 								<div>lorem, ipsum</div>
@@ -308,12 +294,11 @@
 				</div>
 				<div class="me-5">
 					<div class="card" style="width: 150px;">
-						<img src="https://th.bing.com/th/id/R.4deadb53c80590202ce6b72da578b357?rik=QO6f5T6SAeTGig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3XT2rW1AQhw%2fVMt4vbpt1VI%2fAAAAAAAAAIk%2fBEy2EK4EXMw%2fs1600%2fnyanbooru.com_-_348_-_Kagami_Hiiragi_blue_hair_chibi_cute_hatsune_miku_kagamiku_long_hair_lucky_star_twintails_vocaloid%5b1%5d.jpg&ehk=MYGIPZxmke3%2f8dbqjQ5WdvFZi%2b7GoeWlAlLJZNLFSf8%3d&risl=&pid=ImgRaw&r=0"
+						<img src="/assets/design-in/data.jpeg"
 							class="card-img-top" width="100px" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's content.</p>
+							<h5 class="card-title">Judul</h5>
+							<p class="card-text">Deskripsi tentang konten yang dijual</p>
 							<div class="d-flex justify-content-between">
 								<div><i class="fas fa-star pink"></i> <b>4.7</b></div>
 								<div>lorem, ipsum</div>
@@ -323,12 +308,11 @@
 				</div>
 				<div class="me-5">
 					<div class="card" style="width: 150px;">
-						<img src="https://th.bing.com/th/id/R.4deadb53c80590202ce6b72da578b357?rik=QO6f5T6SAeTGig&riu=http%3a%2f%2f4.bp.blogspot.com%2f-3XT2rW1AQhw%2fVMt4vbpt1VI%2fAAAAAAAAAIk%2fBEy2EK4EXMw%2fs1600%2fnyanbooru.com_-_348_-_Kagami_Hiiragi_blue_hair_chibi_cute_hatsune_miku_kagamiku_long_hair_lucky_star_twintails_vocaloid%5b1%5d.jpg&ehk=MYGIPZxmke3%2f8dbqjQ5WdvFZi%2b7GoeWlAlLJZNLFSf8%3d&risl=&pid=ImgRaw&r=0"
+						<img src="/assets/design-in/data.jpeg"
 							class="card-img-top" width="100px" alt="...">
 						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk
-								of the card's content.</p>
+							<h5 class="card-title">Judul</h5>
+							<p class="card-text">Deskripsi tentang konten yang dijual</p>
 							<div class="d-flex justify-content-between">
 								<div><i class="fas fa-star pink"></i> <b>4.7</b></div>
 								<div>lorem, ipsum</div>
@@ -336,21 +320,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="me-5">
 
-					<div class="card" style="width: 150px;">
-						<center>
-							<br><br><br><br>
-							<div style=" height: 55px;width: 55px; border-radius: 50%;background-color: #FF2F6A;"><i
-									class="fas fa-arrow-right text-light" style="position: relative;top: 17px;"></i>
-							</div>
-							<span style="font-size:0.7rem">Lihat Produk Lainnya</span>
-							<br><br><br><br>
-						</center>
-					</div>
-
-
-				</div>
 			</div>
 
 
