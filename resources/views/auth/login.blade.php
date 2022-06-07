@@ -55,7 +55,7 @@
         </form>
     </div>
     <div class="footer">
-        <div class="container">
+        <div class="container ">
             <center>
                 @if (Route::has('register'))
                 <b>Don't have any account? <a href="{{ route('register') }}">Register now</a></b>
