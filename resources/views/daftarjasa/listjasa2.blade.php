@@ -18,6 +18,7 @@
                                 <option value="Foto">Foto</option>
                                 <option value="Video">Video</option>
                                 <option value="Poster">Poster</option>
+                                <option value="Lukisan">Lukisan</option>
                             </select>
                             <br>
                             <input class="btn btn-dark btn-sm" type="submit" value="FILTER">
@@ -29,7 +30,7 @@
             <div class="col-lg-9">
                 <h2> OUR PRODUCT </h2>
                 <div class="row">
-                    @foreach ($DetailJasa as $d)
+                    @forelse ($DetailJasa as $d)
                         <div class="col-sm-4">
                             <div class="card mb-4 product-wap rounded-0">
                                 <div class="card rounded-0">
@@ -43,7 +44,11 @@
                                 </div>
                             </div>
                         </div>
-                    @endforeach
+                    @empty
+                    <div class="alert alert-success">
+                        <strong>Sorry!</strong> keyword not found.
+                      </div>
+                    @endforelse
                 </div>
             </div>
 
