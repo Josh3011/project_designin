@@ -13,6 +13,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,6 +31,12 @@
     <!-- Load fonts style after rendering the layout styles -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+	<script src="https://kit.fontawesome.com/348c676099.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+	<script src="https://kit.fontawesome.com/348c676099.js" crossorigin="anonymous"></script>
+
+
 
 
 
@@ -75,6 +82,37 @@
             background-color: FF3232;
             border-top: 1px solid black;
         }
+
+        .pink {
+			color: rgb(238, 78, 104);
+		}
+
+		.pinkb {
+			background-color: rgb(238, 78, 104);
+		}
+
+		table td {
+			margin-left: 20px;
+		}
+
+		.x {
+			padding: 5px;
+			box-shadow: 2px 2px 10px rgb(238, 78, 104);
+			border-radius: 7px;
+		}
+
+		.bar {
+			user-select: none;
+			color: white;
+			border-bottom: 4px solid rgb(238, 78, 104);
+			position: relative;
+			bottom: 13px;
+			left: 5px;
+		}
+
+		.card-body {
+			font-size: 0.5rem;
+		}
     </style>
 
     <!-- bootstrap -->
