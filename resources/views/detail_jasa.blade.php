@@ -65,7 +65,6 @@
                         <span class="badge text-bg-danger">Illustration</span> <span class="badge text-bg-danger">Video
                             Games</span> <span class="badge text-bg-danger">Anime</span>
                     </p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipi.</p>
                     <table class="table" style="border-top: 1px solid grey;border-bottom: 1px solid grey;">
                         <tr>
                             <th style="border-bottom: 3px solid rgb(238, 78, 104);text-align: center;">Detail</th>
@@ -96,7 +95,8 @@
                     <p><i class="fas fa-star pink"></i><b>4.5</b> rata-rata ulasan</p>
 
                     <hr class="bg-dark border-2 border-top border-secondary">
-                    <br><br><br><br><br>
+                    <br><br>
+                    <a href="/order/{{ $d->ID }}" class="btn btn-danger" role="button">Order</a>
 
 
                     <!-- End Col -->
