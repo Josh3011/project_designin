@@ -10,13 +10,13 @@
                     <hr class="bg-dark border-2 border-top border-secondary">
                     <div class="d-flex justify-content-start py-1">
                         <div class="pe-5">
-                            <img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
+                            <img class='x' src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
                         </div>
                         <div class="px-5">
-                            <img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
+                            <img class='x' src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
                         </div>
                         <div class="px-5">
-                            <img src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
+                            <img class='x' src="/assets/design-in/{{ $d->Foto }}" style="width: 100px;" alt="">
                         </div>
                         <div></div>
                     </div>
