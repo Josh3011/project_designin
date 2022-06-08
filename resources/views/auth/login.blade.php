@@ -102,4 +102,9 @@
 
 </body>
 
+<<<<<<< HEAD
 </html>
+=======
+@endsection
+
+>>>>>>> f9011cea8a0a46a2bf75720160d98891646ab07f

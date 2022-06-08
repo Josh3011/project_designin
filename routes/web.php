@@ -26,9 +26,7 @@ Route::get('/listjasa2/cari','DetailjasaController@cari');
 Route::get('/detail_jasa/{id}','DetailjasaController@view')->name('detailjasa');
 
 //order
-Route::get('order', function () {
-    return view('order');
-});
+
 Route::get('visa', function () {
     return view('visa');
 });
@@ -44,9 +42,21 @@ Route::get('metode_pembayaran', function () {
 Route::get('akun_pengguna', function(){
     return view('akunpengguna');
 });
+
+Route::get('metode_pembayaran', 'MetodePembayaranController@index');
+
 Route::get('shoppingcart', function () {
     return view('shoppingcart');
 });
+Route::get('login1', function () {
+    return view('login1');
+});
+Route::get('register1', function () {
+    return view('register1');
+});
 
-Route::post('order', 'OrderController@storeaddons');
+
+Route::get('order/{id}', 'OrderController@index')->name('order');
+Route::get('order/{idBarang}/{idOrder}', 'OrderController@Detail')->name('orderDetail');
+Route::post('order/{id}', 'OrderController@storeaddons');
 Route::get('metode_pembayaran', 'MetodePembayaranController@index');

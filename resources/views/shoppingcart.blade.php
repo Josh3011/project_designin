@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
 </head>
 <style>
 html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
@@ -36,7 +37,9 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
   -ms-flex: 1;  /* IE 10 */
   flex: 1;
 }
-
+body {
+    font-family: 'Raleway';font-size: 22px;
+}
 </style>
 <body class="w3-theme-l5">
     <div class="topnav text-center" syle="margin-top: 30px">
@@ -67,16 +70,16 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
     <!-- The Grid -->
     <div class="w3-row">
     <!-- Left Column -->
-    <div class="w3-col m7">
+    <div class="w3-col m9">
     <!-- Profile -->
     <div class="w3-card w3-round w3-white">
         <p class="text-center" style="font-size:large">Ringkasan Belanja</p>
         <div id="main">
             <div style="margin-left: 10px;">Total Harga</div>
-            <div style="margin-right: 10px;">RP 420.000</div>
+            <div>RP 420.000</div>
         </div>
         <hr>
-        <div style="margin-left: 27px;">
+        <div class="text-center">
         <button class="button w3-round">Bayar Pesanan</button>
         </div>
     </div>
@@ -103,4 +106,23 @@ html, body, h1, h2, h3, h4, h5 {font-family: "Open Sans", sans-serif}
         </div>
     </div>
     </div>
+    <div class="row justify-content-between" style="margin-top: 10px;margin-bottom: 10px">
+        <div class="col-7 w3-card w3-round w3-white">
+            <div class="w3-container" style="margin-top: 10px;margin-bottom: 10px;margin-right: 10px;margin-left: 10px;">
+            <input type="checkbox" id="penjual1" name="penjual1" value="penjual1">
+            <label for="penjual1">Pro_Art</label><br>
+             <p class="w3-col m3"><img src="https://img.freepik.com/free-vector/mind-space-lineart-illustration_151511-38.jpg?w=2000" class="w3-square" style="height:120px;width:120px" alt="Avatar"></p>
+                <div class="w3-col m8">
+                <p style="font-size:large">Saya akan buat profesional art</p>
+                <p class="fa fa-bolt" style="font-size:15px;color:red"></i> Pengerjaan Ekstra Cepat</p>
+                <p style="font-size:15px;color:red"> RP 420.000</p>
+                </div>
+            </div>
+            <div style="margin-top: 10px;margin-bottom: 10px;margin-right: 10px;margin-left: 10px;">
+                <button class="button w3-round">Ubah Pesanan</button>
+                <button style="font-size:24px" class="fa fa-trash-o"></button>
+            </div>
+        </div>
+        </div>
+
 </div>
