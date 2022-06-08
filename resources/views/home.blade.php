@@ -38,7 +38,8 @@
                         <img src="/assets/design-in/land-3.jpg" alt="New York" class="d-block w-100">
                         <div class="carousel-caption">
                             <h3>Creative</h3>
-                            <p>Relating to or involving the imagination or original ideas, especially in the production of an
+                            <p>Relating to or involving the imagination or original ideas, especially in the production of
+                                an
                                 artistic work.</p>
                         </div>
                     </div>
@@ -53,15 +54,16 @@
                 </button>
             </div>
             <br>
-        <div class="container-fluid bg-3 text-center">
+            <div class="container-fluid bg-3 text-center">
                 <h2> OUR PRODUCT </h2>
                 <br>
                 <div class="row">
                     @foreach ($DetailJasa as $d)
                         <div class="col-sm-3">
-                            <div class="card mb-4 product-wap rounded-0">
+                            <div class="card mb-4 product-wap rounded-0" style="height: 410px">
                                 <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid" src="/assets/design-in/{{ $d->Foto }}">
+                                    <img class="card-img rounded-0 img-fluid" style="height: 250px"
+                                        src="/assets/design-in/{{ $d->Foto }}">
                                 </div>
                                 <div class="card-body">
                                     <a href="/detail_jasa/{{ $d->ID }}"
@@ -74,11 +76,12 @@
                     @endforeach
                 </div>
 
-        </div>
-        {{ $DetailJasa->links() }}
-        <br><br>
+            </div>
+            {{ $DetailJasa->links() }}
+            <br><br>
 
-    </div>
+        </div>
+        
 
     </div>
 @endsection

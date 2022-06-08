@@ -96,7 +96,7 @@
                     <li class="nav-item dropdown">
                         <a class="btn" data-toggle="dropdown">
                             <span class="bi bi-justify"></span></a>
-                        <ul class="dropdown-menu">
+                        <ul class="dropdown-menu" style="width:250px">
                             <li><div class="search">
                                 <form action="/listjasa2/cari" method="GET">
                                     <input class="form-control" type="text" name="cari"
@@ -105,10 +105,12 @@
                                 </form>
                             </div></li>
                             <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Link</a></li>
+                            <li><a class="dropdown-item" href="/akunpengguna">
+                                <span class="bi bi-person-circle"></span> MY ACCOUNT</a></li>
                             <li><a class="dropdown-item" href="/listjasa2">
                                 <span class="bi bi-bag"></span> PRODUCT</a></li>
-                            <li><a class="dropdown-item" href="#">A third link</a></li>
+                            <li><a class="dropdown-item" href="#">
+                                <span class="bi bi-bag-check"></span> MY ORDER</a></li>
                         </ul>
                     </li>
                 </ul>

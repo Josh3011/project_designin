@@ -32,22 +32,23 @@
                 <div class="row">
                     @forelse ($DetailJasa as $d)
                         <div class="col-sm-4">
-                            <div class="card mb-4 product-wap rounded-0">
+                            <div class="card mb-4 product-wap rounded-0" style="height:400px">
                                 <div class="card rounded-0">
-                                    <img class="card-img rounded-0 img-fluid" src="/assets/design-in/{{ $d->Foto }}">
+                                    <img class="card-img rounded-0 img-fluid" style="height:250px"
+                                        src="/assets/design-in/{{ $d->Foto }}">
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body text-center">
                                     <a href="/detail_jasa/{{ $d->ID }}"
-                                        class="h3 text-center">{{ $d->Judul }}</a>
+                                        class="h4 text-center">{{ $d->Judul }}</a>
                                     <h4 class="mb-0">{{ $d->harga }}</h4>
                                     <p>{{ $d->DeskripsiJasaSingkat }}</p>
                                 </div>
                             </div>
                         </div>
                     @empty
-                    <div class="alert alert-success">
-                        <strong>Sorry!</strong> keyword not found.
-                      </div>
+                        <div class="alert alert-success">
+                            <strong>Sorry!</strong> keyword not found.
+                        </div>
                     @endforelse
                 </div>
             </div>
@@ -56,7 +57,13 @@
 
 
             <!-- Pagination -->
-            {{ $DetailJasa->links() }}
+            <div class="row">
+                <div class="col-sm-6">
+                </div>
+                <div class="col-sm-6">
+                    {{ $DetailJasa->links() }}
+                </div>
+            </div>
         </div>
     </div>
 @endsection
