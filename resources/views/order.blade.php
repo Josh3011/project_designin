@@ -66,7 +66,7 @@
             <div style="border-top: 1px solid #D6D6D6; border-bottom: 1px solid #D6D6D6;" class="col-8 py-4">
               <div class="d-flex justify-content-between ">
                   <p> <img style="width: 26px; height: 26px" class="d-inline" src="/assets/design-in/clock.png" alt=""> Pengiriman 5 Hari</p>
-                  <h5>Rp. {{$jasa->harga}}</h5>
+                  <h5> {{$jasa->harga}}</h5>
               </div>
               <div class="d-flex justify-content-between ">
                 <p> <img style="width: 26px; height: 26px" class="d-inline" src="/assets/design-in/repeat.png" alt=""> 1 Kesempatan revisi</p>
@@ -172,7 +172,7 @@
           <div  class="col-11">
             <div  class="d-flex justify-content-between align-items-center">
               <h2>Total Tagihan</h2>
-              <h4>Rp. {{$jasa->harga}}</h4>
+              <h4> {{$jasa->harga}}</h4>
             </div>
             <a href="metode_pembayaran">
                 <div style="margin-top: 60px;">
