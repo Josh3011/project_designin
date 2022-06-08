@@ -26,7 +26,7 @@
 
 
 
-
+    @foreach ($DetailJasa as $jasa)
     <div class="row" style="margin-top: 100px;">
       <div class="col-7 review">
         <h1 class="mb-5">Jasa yang dibeli</h1>
@@ -36,14 +36,14 @@
             <img style="width: 164px; height: 145px; border-radius: 10px;" src="/assets/design-in/hero.png" alt="">
           </div>
           <div class="col-5">
-            <h3>Character Illustration</h3>
+            <h3>{{$jasa->Judul}}</h3>
             <h4 class="mt-3">Tulis catatan</h4>
           </div>
         </div>
 
         <div class="mt-5 desc">
           <h4>Deskripsi jasa</h4>
-          <p class="my-4">Dada ke atas</p>
+          <p class="my-4">{{$jasa->DeskripsiJasa}}</p>
           <p class="my-0">Bust up, HD, kanvas A4 (bisa custom)</p>
           <p class="mb-4">300-350 Dpi </p>
           <div class="row">
@@ -66,7 +66,7 @@
             <div style="border-top: 1px solid #D6D6D6; border-bottom: 1px solid #D6D6D6;" class="col-8 py-4">
               <div class="d-flex justify-content-between ">
                   <p> <img style="width: 26px; height: 26px" class="d-inline" src="/assets/design-in/clock.png" alt=""> Pengiriman 5 Hari</p>
-                  <h5>Rp. 50.000</h5>
+                  <h5>Rp. {{$jasa->harga}}</h5>
               </div>
               <div class="d-flex justify-content-between ">
                 <p> <img style="width: 26px; height: 26px" class="d-inline" src="/assets/design-in/repeat.png" alt=""> 1 Kesempatan revisi</p>
@@ -78,7 +78,7 @@
           <div class="row mt-5">
             <div class="col-9 ">
           <div style="border: 1px solid #FF3322" class="py-5 ps-3 pe-5 rounded" >
-            <form action="/order" method="post">
+            <form action="/order/{{$jasa->ID}}" method="post">
                 {{csrf_field()}}
             <div class="d-flex justify-content-between list ">
             <div class="form-check">
@@ -164,11 +164,7 @@
             <div class="col-11">
           <div class="d-flex justify-content-between ">
             <p>Total Harga 1 Jasa</p>
-            <p>Rp50.000</p>
-          </div>
-          <div class="d-flex justify-content-between">
-            <p>Total Harga 1 Jasa</p>
-            <p>Rp50.000</p>
+            <p>{{$jasa->harga}}</p>
           </div>
         </div>
         </div>
@@ -176,7 +172,7 @@
           <div  class="col-11">
             <div  class="d-flex justify-content-between align-items-center">
               <h2>Total Tagihan</h2>
-              <h4>Rp220.000</h4>
+              <h4>Rp. {{$jasa->harga}}</h4>
             </div>
             <a href="metode_pembayaran">
                 <div style="margin-top: 60px;">
@@ -185,6 +181,7 @@
         </a>
           </div>
         </div>
+        @endforeach
         </div>
       </div>
 
