@@ -16,11 +16,6 @@
         html,
         body {
             background-color: white;
-            background-image: url('/assets/design-in/backgrnd.png');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-position-x: 380px;
-            background-position-y: 325px;
         }
 
         .full-height {
@@ -90,8 +85,11 @@
         @endif
 
         <div class="content">
-            <div class="title m-b-md">
-                Design.in
+            <div class="col-md-6">
+                <div class="mb-4" style="color: red;">
+                    <center><h1> Design.In </h1></center>
+                    </div>
+                <img src="/assets/design-in/backgrnd.png" alt="Image" class="img-fluid">
             </div>
         </div>
 
