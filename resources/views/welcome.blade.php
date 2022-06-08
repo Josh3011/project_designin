@@ -87,8 +87,8 @@
         <div class="content">
             <div class="col-md-6">
                 <div class="mb-4" style="color: red;">
-                    <center><h1> Design.In </h1></center>
-                    </div>
+                    <center><h1> Design.in </h1></center>
+                </div>
                 <img src="/assets/design-in/backgrnd.png" alt="Image" class="img-fluid">
             </div>
         </div>

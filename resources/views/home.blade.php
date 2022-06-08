@@ -77,11 +77,17 @@
                 </div>
 
             </div>
-            {{ $DetailJasa->links() }}
+            <div class="row">
+                <div class="col-sm-5">
+                </div>
+                <div class="col-sm-7">
+                    {{ $DetailJasa->links() }}
+                </div>
+            </div>
             <br><br>
 
         </div>
-        
+
 
     </div>
 @endsection

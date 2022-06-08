@@ -19,6 +19,7 @@
                                 <option value="Video">Video</option>
                                 <option value="Poster">Poster</option>
                                 <option value="Lukisan">Lukisan</option>
+                                <option value="Logo">Logo</option>
                             </select>
                             <br>
                             <input class="btn btn-dark btn-sm" type="submit" value="FILTER">

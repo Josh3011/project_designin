@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-md-6">
                     <div style="color: red;">
-                    <center><h1> Design.In </h1></center>
+                    <center><h1> Design.in </h1></center>
                     </div>
                     <br>
                     <img src="/assets/design-in/backgrnd.png" alt="Image" class="img-fluid">
