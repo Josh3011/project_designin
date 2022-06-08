@@ -14,12 +14,12 @@
                 <ul class="list-unstyled templatemo-accordion">
                     <li class="pb-3">
                         <form action="/listjasa2/cari" method="GET">
-                            <select class="dropdown" id="kategori" name="cari" value="{{ old('cari') }}">
+                            <select class="form-select" id="kategori" name="cari" value="{{ old('cari') }}">
                                 <option value="Foto">Foto</option>
                                 <option value="Video">Video</option>
                                 <option value="Poster">Poster</option>
                             </select>
-
+                            <br>
                             <input class="btn btn-dark btn-sm" type="submit" value="FILTER">
                         </form>
 

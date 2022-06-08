@@ -97,8 +97,17 @@
                         <a class="btn" data-toggle="dropdown">
                             <span class="bi bi-justify"></span></a>
                         <ul class="dropdown-menu">
+                            <li><div class="search">
+                                <form action="/listjasa2/cari" method="GET">
+                                    <input class="form-control" type="text" name="cari"
+                                        placeholder="Cari Jasa berdasarkan Judul" value="{{ old('cari') }}">
+                                    <input class="form-control btn-dark" type="submit" value="Find">
+                                </form>
+                            </div></li>
+                            <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item" href="#">Link</a></li>
-                            <li><a class="dropdown-item" href="/listjasa2">OUR PRODUCT</a></li>
+                            <li><a class="dropdown-item" href="/listjasa2">
+                                <span class="bi bi-bag"></span> PRODUCT</a></li>
                             <li><a class="dropdown-item" href="#">A third link</a></li>
                         </ul>
                     </li>
