@@ -62,8 +62,7 @@
                 <div class="col-4 mx-4">
                     <h1 class="fw-bold" style="font-size: 3.3rem;">{{ $d->Judul }}</h1>
                     <p class="d-flex justify-content-between">
-                        <span class="badge text-bg-danger">Illustration</span> <span class="badge text-bg-danger">Video
-                            Games</span> <span class="badge text-bg-danger">Anime</span>
+                        <span class="badge text-bg-danger">Illustration</span> <span class="badge text-bg-danger">Editing</span> <span class="badge text-bg-danger">Artistic</span>
                     </p>
                     <table class="table" style="border-top: 1px solid grey;border-bottom: 1px solid grey;">
                         <tr>
@@ -88,7 +87,7 @@
                         </div>
 
                         <div style="vertical-align: middle;position: relative;top: 20px;">
-                            <span class="badge text-bg-danger">Follow +</span>
+                            <button class="btn btn-outline-danger btn-sm">Follow +</button>
                         </div>
 
                     </div>
