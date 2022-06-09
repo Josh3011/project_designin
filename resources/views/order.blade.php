@@ -33,7 +33,7 @@
 
         <div class="row">
           <div class="col-3 px-0">
-            <img style="width: 164px; height: 145px; border-radius: 10px;" src="/assets/design-in/{{$jasa->foto}}" alt="">
+            <img style="width: 164px; height: 145px; border-radius: 10px;" src="/assets/design-in/{{ $jasa->Foto }}" alt="">
           </div>
           <div class="col-5">
             <h3>{{$jasa->Judul}}</h3>

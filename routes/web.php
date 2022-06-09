@@ -27,6 +27,9 @@ Route::get('/listjasa2','DetailjasaController@index');
 Route::get('/listjasa2/cari','DetailjasaController@cari');
 Route::get('/detail_jasa/{id}','DetailjasaController@view')->name('detailjasa');
 
+Route::get('/akunpengguna', function () {
+    return view('akunpengguna');
+});
 //order
 Route::get('order', function () {
     return view('order');
