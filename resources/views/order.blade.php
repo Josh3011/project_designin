@@ -33,7 +33,7 @@
 
         <div class="row">
           <div class="col-3 px-0">
-            <img style="width: 164px; height: 145px; border-radius: 10px;" src="/assets/design-in/hero.png" alt="">
+            <img style="width: 164px; height: 145px; border-radius: 10px;" src="/assets/design-in/{{$jasa->foto}}" alt="">
           </div>
           <div class="col-5">
             <h3>{{$jasa->Judul}}</h3>
@@ -146,7 +146,7 @@
               <h2>Rp. 300.000</h2>
             </div>
           </div>
-          {{-- <button class="form-control btn btn-danger text-white" type="submit">Submit</button> --}}
+          <button class="form-control btn btn-danger text-white" type="submit">Submit</button>
 
           </div>
 
@@ -170,12 +170,9 @@
         <div class="row tagihan mt-5">
           <div  class="col-11">
             <div  class="d-flex justify-content-between align-items-center">
-<<<<<<< Updated upstream
               <h2>Total Tagihan</h2>
               <h4> {{$jasa->harga}}</h4>
-=======
 
->>>>>>> Stashed changes
             </div>
             <a href="metode_pembayaran">
                 <div style="margin-top: 60px;">
