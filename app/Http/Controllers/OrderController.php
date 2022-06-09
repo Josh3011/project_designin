@@ -22,14 +22,56 @@ class OrderController extends Controller
     }
 
 
-    public function detail($idBarang, $idOrder) {
+    public function storeaddons(Request $request, $id) {
+        // DB::table('addons')->insert([
+        //     'nama_addons' => $request->addons,
 
-        $DetailJasa = DB::table('detailjasa')->where('ID', $idBarang)->get();
-        $DetailOrder = DB::table('orderjasa')->join('detailjasa', 'idBarang', '=', 'detailjasa.id')->where('ID', $idOrder)->select('orderjasa.*', 'detailjasa.*');
+        // ]);
+        $addons = $request->input('nama_addons');
+        $idBarang = DB::table('detailjasa')->where('id',$id)->get();
+        if (is_array($addons) || is_object($addons)) {
+            foreach($addons as $addon){
+                $total = $addon;
+                $total = $total + $addon;
+               }
+               DB::table('orderjasa')->insert([
+                'order_pembayaran' => 'belum',
+                'addons' => $total,
+                'idBarang' => $idBarang[0]->ID,
+                'total' => 0
+            ]);
+        }
 
-        return view('detailOrder', ['DetailJasa' => $DetailJasa, 'DetailOrder' => $DetailOrder]);
+        // $idOrder = DB::table('orderjasa')->where('idBarang', $idBarang)->orderBy('id', 'DESC')->first();
+
+        // return redirect()->route('metode_pembayaran', [
+        //     $id, $idOrder
+        // ]);
+
 
     }
+
+
+    public function metode_pembayaran($id, $idOrder) {
+
+        $DetailOrder = DB::table('orderjasa')->where('ID', $id)->get();
+        $DetailJasa = DB::table('detailjasa')->join('orderjasa', 'idBarang', '=', 'detailjasa.id')->select('orderjasa.*', 'detailjasa.*')->get();
+
+
+
+        return view('metode_pembayaran', ['DetailJasa' => $DetailJasa, 'DetailOrder' => $DetailOrder]);
+
+    }
+
+    public function storeOrder(Request $request, $id, $idOrder) {
+        DB::table('orderjasa')->where('id', $idOrder)->where('idBarang', $id)->update([
+            'order_pembayaran' => $request->order_pembayaran,
+            'total' => $request->total,
+        ]);
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      *
@@ -54,29 +96,6 @@ class OrderController extends Controller
     // }
 
 
-    public function storeaddons(Request $request, $id) {
-        // DB::table('addons')->insert([
-        //     'nama_addons' => $request->addons,
-
-        // ]);
-        $addons = $request->input('nama_addons');
-        $idBarang = DB::table('detailjasa')->where('id',$id)->get();
-        if (is_array($addons) || is_object($addons)) {
-            foreach($addons as $addon){
-                $total = $addon;
-                $total = $total + $addon;
-               }
-               DB::table('orderjasa')->insert([
-                'addons' => $total,
-                'idBarang' => $idBarang[0]->ID,
-
-            ]);
-        }
-
-
-
-
-    }
 
     /**
      * Display the specified resource.

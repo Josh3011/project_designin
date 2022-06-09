@@ -11,6 +11,8 @@
 |
 */
 
+use Illuminate\Support\Facades\Route;
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,7 +28,9 @@ Route::get('/listjasa2/cari','DetailjasaController@cari');
 Route::get('/detail_jasa/{id}','DetailjasaController@view')->name('detailjasa');
 
 //order
-
+Route::get('order', function () {
+    return view('order');
+});
 Route::get('visa', function () {
     return view('visa');
 });
@@ -36,14 +40,12 @@ Route::get('gopay', function () {
 Route::get('detail_jasa', function () {
     return view('detail_jasa');
 });
-Route::get('metode_pembayaran', function () {
-    return view('metode_pembayaran');
-});
+
 Route::get('akun_pengguna', function(){
     return view('akunpengguna');
 });
 
-Route::get('metode_pembayaran', 'MetodePembayaranController@index');
+
 
 Route::get('shoppingcart', function () {
     return view('shoppingcart');
@@ -57,6 +59,7 @@ Route::get('register1', function () {
 
 
 Route::get('order/{id}', 'OrderController@index')->name('order');
-Route::get('order/{idBarang}/{idOrder}', 'OrderController@Detail')->name('orderDetail');
+// Route::get('order/{idBarang}/{idOrder}', 'OrderController@Detail')->name('orderDetail');
 Route::post('order/{id}', 'OrderController@storeaddons');
-Route::get('metode_pembayaran', 'MetodePembayaranController@index');
+Route::get('metode_pembayaran/{id}/{idOrder}', 'OrderController@metode_pembayaran')->name('metode_pembayaran');
+Route::post('metode_pembayaran/{id}/{idOrder}', 'OrderController@storeOrder')->name('storeOrder');

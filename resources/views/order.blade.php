@@ -146,8 +146,8 @@
               <h2>Rp. 300.000</h2>
             </div>
           </div>
-          <button class="form-control btn btn-danger text-white" type="submit">Submit</button>
-        </form>
+          {{-- <button class="form-control btn btn-danger text-white" type="submit">Submit</button> --}}
+
           </div>
 
         </div>
@@ -159,26 +159,30 @@
 
       <div style="width: 483px; padding-left: 35px;" class="col-5 cart">
         <div style="margin-top: 60px;">
-          <h3 class="mt-4">Ringkasan Harga</h3>
+
           <div class="row">
             <div class="col-11">
           <div class="d-flex justify-content-between ">
-            <p>Total Harga 1 Jasa</p>
-            <p>{{$jasa->harga}}</p>
+
           </div>
         </div>
         </div>
         <div class="row tagihan mt-5">
           <div  class="col-11">
             <div  class="d-flex justify-content-between align-items-center">
+<<<<<<< Updated upstream
               <h2>Total Tagihan</h2>
               <h4> {{$jasa->harga}}</h4>
+=======
+
+>>>>>>> Stashed changes
             </div>
             <a href="metode_pembayaran">
                 <div style="margin-top: 60px;">
-            <button class="mt-5"> <img src="/assets/design-in/cart.png" style="width: 39px;" alt=""> Beli Sekarang </button>
+            <button type="submit" class="mt-5"> <img src="/assets/design-in/cart.png" style="width: 39px;" alt=""> Beli Sekarang </button>
         </div>
         </a>
+    </form>
           </div>
         </div>
         @endforeach

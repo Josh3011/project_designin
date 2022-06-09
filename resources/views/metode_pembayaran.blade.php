@@ -49,38 +49,46 @@
 
             <h1 class="mx-auto text-center">Design.in</h1>
 
-            <h3 class="mx-auto text-center">METODE PEMBAYARAN</h3>
+            @foreach ($DetailJasa as $jasa)
+
+            <form action="/metode_pembayaran/{{$jasa->idBarang}}/{{$jasa->id}}" method="post">
+                {{csrf_field()}}
+            <div>
+                <h2>Ringkasan Harga</h2>
+                <input class="text-center" type="text" name="total" value="{{ $jasa->harga + $jasa->addons}}">
+
+            </div>
+
+            <h3 class="mt-4 mx-auto text-center">METODE PEMBAYARAN</h3>
 
 
-            <form name="visa">
 
 
-                <div class="row">
 
-                        <div class="mb-3 mt-3">
-                            <label for="metode pembayaran" class="form-label">Metode Pembayaran: </label>
-                            <select class="form-select" id="metodepembayaran" name="metodepembayaran">
-                                <option value="" readonly="true" hidden="true">Pilih Metode Pembayaran</option>
-                                <option value="BANK">TRANSFER BANK (BRI 23048230482103948239048)</option>
-                                <option value="E-WALLET">E-WALLET (Shoope Pay 081282383710)</option>
-                            </select>
-                        </div>
-                    </div>
+                        <div class="row">
 
-                <div class="mb-3 mt-3">
-                    <label for="nama" class="form-label">NAMA</label>
-                    <input type="text" class="form-control" id="nama" placeholder="Muhammad Ghiffari" name="nama">
+                                <div class="mb-3 mt-3">
+                                    <label for="metode pembayaran" class="form-label">Metode Pembayaran: </label>
+                                    <select class="form-select" id="metodepembayaran" name="order_pembayaran">
+                                        <option value="" readonly="true" hidden="true">Pilih Metode Pembayaran</option>
+                                        <option value="BANK ">TRANSFER BANK (BRI 23048230482103948239048)</option>
+                                        <option value="E-WALLET">E-WALLET (Shoope Pay 081282383710)</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                </div>
-                        <form action="/action_page.php">
+
+
                             <label for="myfile">Select files:</label> <br>
                             <input type="file" id="myfile" name="myfile" multiple><br><br>
-                          </form>
+
 
 
                <center><input  type="submit" class="btn btn-danger" value="SELESAIKAN PEMBAYARAN">    </center>
 
+            </form>
 
+               @endforeach
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
